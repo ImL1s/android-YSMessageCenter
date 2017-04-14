@@ -1,10 +1,10 @@
 # android-ys-messageCenter
 
 
-## a lite message center not use reflecter
+### a lite message center not use reflecter
 
 
-### simple use
+## simple use
 
 addListener
 
@@ -36,7 +36,7 @@ dispatch event
     }
     
     
-### sticky dispatch
+## sticky dispatch
 
 dispatch event
 
