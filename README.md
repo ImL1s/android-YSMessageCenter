@@ -28,13 +28,29 @@ dispatch event
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            MessageCenter.getInstance().sendEmpty("onclick");
+            return true;
+        } else
+            return super.onTouchEvent(event);
+    }
+    
+    
+### sticky dispatch
+
+dispatch event
+
+    private void testStickyMsgCenter() {
+        MessageCenter.init(getApplicationContext(), MessageCenter.PollingMode.BACKGROUND);
+        MessageCenter.getInstance().sendEmptySticky("onclick");
+    }
+    
+add listener
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
 
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-
-            /** testBackgroundMsgCenter & testPostingMsgCenter */
-            MessageCenter.getInstance().sendEmpty("onclick");
-
-            /** testStickyMsgCenter */
             MessageCenter.getInstance().addListener("onclick", new MessageCenter.MainThreadEventListener() {
                 @Override
                 public void onEvent(MessageCenter.Message msg) {
