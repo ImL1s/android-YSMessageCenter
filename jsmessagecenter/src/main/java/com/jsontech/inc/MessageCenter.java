@@ -1,4 +1,4 @@
-package org.iml1s.messagecenter;
+package com.jsontech.inc;
 
 import android.content.Context;
 import android.os.Handler;

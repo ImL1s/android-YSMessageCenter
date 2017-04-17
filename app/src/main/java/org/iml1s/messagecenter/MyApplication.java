@@ -2,6 +2,8 @@ package org.iml1s.messagecenter;
 
 import android.app.Application;
 
+import com.jsontech.inc.MessageCenter;
+
 
 /**
  * Created by ImL1s on 2017/4/14.

@@ -1,0 +1,112 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+version = "1.0.0"
+group = "com.jsontech.inc.messagecenter"
+
+//def siteUrl = 'https://github.com/ImL1s/android-YSMessageCenter'
+//def gitUrl = 'https://github.com/ImL1s/android-YSMessageCenter.git'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+}
+
+
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+task generateJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task generateJavadocsJar(type: Jar, dependsOn: generateJavadocs) {
+    from generateJavadocs.destinationDir
+    classifier 'javadoc'
+}
+
+artifacts {
+    archives generateJavadocsJar
+    archives generateSourcesJar
+}
+
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+bintray {
+    user = 'iml1s'
+    key = '0c8bb5ecb1b4ebf8602a03d054887e7537ce7665'
+    configurations = ['archives']
+    pkg {
+        repo = 'l1s.bintray.com/messageCenter'
+        name = 'com.jsontech.inc.JSMessageCenter'    //发布到JCenter上的项目名字
+
+        version {
+            name = '1.0.1-tuts'
+            desc = 'My test upload'
+            vcsTag = '1.0.0'
+        }
+
+        websiteUrl = 'https://github.com/ImL1s/android-YSMessageCenter'
+        vcsUrl = 'https://github.com/ImL1s/android-YSMessageCenter.git'
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
+}
+
+ext {
+    user = 'iml1s'
+    apiKey = '0c8bb5ecb1b4ebf8602a03d054887e7537ce7665'
+    bintrayRepo = 'messageCenter'
+    bintrayName = 'messageCenter'
+    publishedGroupId = 'com.johnson.inc.messageCenter'
+    libraryName = 'JSMessagecenter'
+    artifact = 'messageCenter'
+    libraryDescription = 'message center'
+    siteUrl = 'https://github.com/ImL1s/android-YSMessageCenter'
+    gitUrl = 'https://github.com/ImL1s/android-YSMessageCenter.git'
+    libraryVersion = '1.0.0'
+    developerId = 'iml1s'
+    developerName = 'iml1s'
+    developerEmail = 'aa22396584@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+user = 'iml1s'
+//key = '0c8bb5ecb1b4ebf8602a03d054887e7537ce7665'
+apiKey = '0c8bb5ecb1b4ebf8602a03d054887e7537ce7665'
+
+apply from: 'https://raw.githubusercontent.com/isanwenyu/BintrayUploadGradle/master/bintray_upload.gradle'
+
+

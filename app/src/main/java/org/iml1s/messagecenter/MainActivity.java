@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
+import com.jsontech.inc.MessageCenter;
+
 public class MainActivity extends AppCompatActivity {
 
 

@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import com.jsontech.inc.MessageCenter;
+
 public class DemoPersonalNameActivity extends AppCompatActivity {
 
     private EditText ed_name;

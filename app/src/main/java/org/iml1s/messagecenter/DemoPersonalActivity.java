@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.jsontech.inc.MessageCenter;
+
 public class DemoPersonalActivity extends AppCompatActivity implements MessageCenter.MainThreadEventListener {
 
     public static final String MSG_ON_CHANGE_NAME = "onChangeName";
