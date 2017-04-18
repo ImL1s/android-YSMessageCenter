@@ -1,4 +1,4 @@
-package org.iml1s.messagecenter;
+package org.iml1s.messagecenter.wrapper;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.jsontech.inc.MessageCenter;
+
+import org.iml1s.messagecenter.R;
 
 public class DemoPersonalActivity extends AppCompatActivity implements MessageCenter.MainThreadEventListener {
 

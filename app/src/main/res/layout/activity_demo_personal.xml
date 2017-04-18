@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="org.iml1s.messagecenter.DemoPersonalActivity">
+    tools:context="org.iml1s.messagecenter.wrapper.DemoPersonalActivity">
 
     <TextView
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package org.iml1s.messagecenter;
+package org.iml1s.messagecenter.wrapper;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.jsontech.inc.MessageCenter;
+
+import org.iml1s.messagecenter.R;
 
 public class DemoPersonalNameActivity extends AppCompatActivity {
 
