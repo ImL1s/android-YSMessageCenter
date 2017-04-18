@@ -107,6 +107,7 @@ public class MessageCenter {
     /**
      * add the listener sticky.
      * 加入Listener, sticky.
+     *
      * @param messageName
      * @param messageEventListener
      */
@@ -449,9 +450,14 @@ public class MessageCenter {
             this.contentType = contentType;
         }
 
+        public Map<String, Object> getDicData() {
+            return this.dicData;
+        }
+
         /**
          * add content to message.
          * 向消息中加入內容(key Value).
+         *
          * @param key
          * @param value
          */

@@ -16,6 +16,6 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        MessageCenter.init(this, MessageCenter.PollingMode.BACKGROUND);
+//        MessageCenter.init(this, MessageCenter.PollingMode.BACKGROUND);
     }
 }

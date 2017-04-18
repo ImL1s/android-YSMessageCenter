@@ -64,10 +64,10 @@ Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 bintray {
     user = 'iml1s'
-    key = '0c8bb5ecb1b4ebf8602a03d054887e7537ce7665'
+    key = '6739abce1fcde0db70bd141c2d863499a8df9004'
     configurations = ['archives']
     pkg {
-        repo = 'l1s.bintray.com/messageCenter'
+        repo = 'maven'
         name = 'com.jsontech.inc.JSMessageCenter'    //发布到JCenter上的项目名字
 
         version {
@@ -107,6 +107,6 @@ user = 'iml1s'
 //key = '0c8bb5ecb1b4ebf8602a03d054887e7537ce7665'
 apiKey = '0c8bb5ecb1b4ebf8602a03d054887e7537ce7665'
 
-apply from: 'https://raw.githubusercontent.com/isanwenyu/BintrayUploadGradle/master/bintray_upload.gradle'
+//apply from: 'https://raw.githubusercontent.com/isanwenyu/BintrayUploadGradle/master/bintray_upload.gradle'
 
 
