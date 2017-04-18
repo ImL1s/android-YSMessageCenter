@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <!-- <activity android:name=".DemoPersonalActivity" /> -->
-        <activity android:name=".wrapper.DemoPersonalNameActivity"/>
+        <activity android:name=".rawuse.DemoPersonalNameActivity"/>
         <!--<activity android:name=".wrapper.WrapperActivity"/>-->
     </application>
 

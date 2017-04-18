@@ -1,4 +1,4 @@
-package org.iml1s.messagecenter.wrapper;
+package org.iml1s.messagecenter.rawuse;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
