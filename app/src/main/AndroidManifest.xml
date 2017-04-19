@@ -20,6 +20,7 @@
         <!-- <activity android:name=".DemoPersonalActivity" /> -->
         <activity android:name=".rawuse.DemoPersonalNameActivity"/>
         <!--<activity android:name=".wrapper.WrapperActivity"/>-->
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
